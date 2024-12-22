@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Microsoft Yahei, Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial, sans-serif;
+}
+ul, li, dl, dt, dd {
+    list-style: none;
+}
+img[src=""],
+img:not([src]) {
+    opacity: 0;
+}
+/* 骨架 */
+.placeholder {
+    opacity: 1;
+    background:linear-gradient(118deg,rgba(121,121,121,.1) 25%,rgba(121,121,121,.2) 37%,rgba(121,121,121,.1) 63%);
+    -webkit-animation:placeholder 1.5s ease infinite!important;
+    animation:placeholder 1.5s ease infinite!important;
+    background-size:400% 100%!important
+}
+@-webkit-keyframes placeholder {
+    0% {
+        background-position:100% 50%
+    }
+    100% {
+        background-position:0 50%
+    }
+}
+@keyframes placeholder {
+    0% {
+        background-position:100% 50%
+    }
+    100% {
+        background-position:0 50%
+    }
+}
+html, body, img{
+    width: 100%;
+    height: 100%;
+}
+body{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #e6e6e6;
+}
+body:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    clip-path: circle(65% at right 35%);
+    background: #e6e6e6;
+    background-image: linear-gradient(0deg, #fd9bb0 10%, #F6416C 100%);
+}
+img{
+    background-color: #eaeffe;
+    object-fit: cover;
+}
+body.noTransition *{
+    transition: unset!important;
+}
+main{
+    position: relative;
+    display: grid;
+    width: 900px;
+    grid-template-columns: 450px 1fr;
+    grid-template-rows: 250px 1fr;
+    background: #fff;
+    border-radius: 12px;
+    justify-content: space-between;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    overflow: auto;
+    margin-top: 15px;
+}
+main::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    clip-path: circle(65% at right 35%);
+    background-image: linear-gradient(135deg, #fd9bb0 10%, #F6416C 100%);
+}
+main .item{
+    min-width: 0;
+    z-index: 1;
+}
+main .item:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+main .item.title{
+    padding: 20px 15px 20px 20px;
+    overflow: auto;
+}
+main .item.title>h1{
+    font-size: 24px;
+}
+main .item.title>p{
+    font-size: 14px;
+    color: #737373;
+    margin-top: 15px;
+}
+main .item.downlist{
+    padding: 0 20px 20px;
+}
+main .item.downlist .type0{
+    display: flex;
+    flex-wrap: wrap;
+}
+main .item.downlist .type0>a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5298ff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+    margin: 20px 15px 0 0;
+    border: 0;
+    white-space: nowrap;
+    transition: all .3s;
+}
+main .item.downlist .type0>a:hover{
+    opacity: .9;
+}
+main .item.downlist .type0>a{
+    display: flex;
+    align-items: center;
+}
+main .item.downlist .type0>a>img{
+    margin-right: 5px;
+}
+main .item.downlist .type0>a>div{
+    display: flex;
+    flex-direction: column;
+}
+main .item.downlist .type0>a>div>*{
+    line-height: 1;
+    white-space: normal;
+    word-break: break-all;
+}
+main .item.downlist .type0>a>div>span{
+    font-size: 15px;
+}
+main .item.downlist .type0>a>div>item{
+    font-size: 12px;
+    margin-top: 5px;
+}
+main .item.downlist .type0>a>svg.icon{
+    margin-right: 10px;
+}
+
+/******************************
+ * 回复/登录下载
+ ******************************/
+main .item.downlist .type1,
+main .item.downlist .type2,
+main .item.downlist .type3{
+    width: 100%;
+    border: 2px dashed #5298ff;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: #444;
+}
+main .item.downlist .type1 span,
+main .item.downlist .type2 span,
+main .item.downlist .type3 span{
+    cursor: pointer;
+    color: #5298ff;
+    margin: 0 5px;
+}
+
+main .item.downlist .type3 .pay-button{
+    margin-top: 20px;
+}
+
+main .item.downlist .type3 .pay-button a{
+    display: inline-block;
+    border-radius: 4px;
+    transition: .15s;
+    vertical-align: middle;
+    padding: .3em .6em;
+    text-align: center;
+    font-weight: 400;
+    background: linear-gradient(135deg, #59c3fb 10%, #268df7 100%);
+    color: #fff;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+main .item.downlist .type3 .pay-button a + a{
+    margin-left: 10px;
+    background: linear-gradient(135deg, #f59f54 10%, #ff6922 100%);
+}
+
+main .item.downlist .panel{
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #eaeffe;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    transition: all .3s;
+}
+main .item.downlist .panel:hover{
+    border-color: #5298ff;
+}
+main .item.downlist .panel .panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eaeffe;
+    color: #31708f;
+    background-color: #eaeffe;
+}
+main .item.downlist .panel .panel-heading h3{
+    font-size: 14px;
+    font-weight: 500;
+}
+main .item.downlist .panel .panel-body{
+    padding: 15px;
+    color: #666;
+    font-size: 14px;
+}
+main .item.downlist .panel .panel-body .help li {
+    line-height: 25px;
+    font-size: 14px;
+    color: #666;
+    white-space: break-spaces;
+    word-break: break-all;
+}
+main .item.downlist .panel .panel-body .help li em {
+    font-style: normal;
+    background-color: #eaeffe;
+    padding: 5px;
+    border-radius: 4px;
+    color: #31708f;
+}
+footer{
+    z-index: 1;
+    font-size: 14px;
+    margin: 15px 0;
+}
+footer *{
+    color: #333;
+}
+
+#pay-box{
+    height: auto!important;
+}
+
+.pay-box{
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.pay-box .pay-qrcode{
+    width: 120px;
+    height: 120px;
+    border: 1px solid #eee;
+}
+.pay-box .pay-qrcode .img{
+    width: 100%;
+    height: 100%;
+    transition: all .2s;
+}
+.pay-box .pay-info{
+    flex: 1;
+    margin-left: 10px;
+}
+.pay-box .pay-info p + p{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #bbb;
+}
+.pay-box .pay-info p + p a{
+    color: #bbb;
+    text-decoration: underline;
+}
+.pay-box .pay-info .money{
+    font-weight: 700;
+    font-size: 30px;
+    color: #ff5473;
+}
+.pay-box .pay-info .money .mark{
+    font-size: 13px;
+}
+
+
+/******************************
+ * 广告
+ ******************************/
+.jump{display: grid;grid-row-gap: 5px;margin-top: 5px;width: 100%;}
+.jump:nth-of-type(1){margin-top: 20px;}
+.jump.jump-pic{display: grid;grid-row-gap: 5px;}
+.jump.jump-pic>a{display: block;position: relative;}
+.jump.jump-pic>a>img{width: 100%;height: 70px;border-radius: 10px;object-fit: unset;}
+.jump.jump-pic.jump-bisection{grid-template-columns: repeat(2, 1fr);grid-column-gap: 5px;}
+.jump.jump-pic.jump-block{grid-template-columns: repeat(6, 1fr);grid-column-gap: 5px;}
+.jump.jump-pic.jump-block>a>img{height: 100px;object-fit: unset;}
+.jump.jump-text{display: grid;grid-template-columns: repeat(5, 1fr);grid-column-gap: 5px;grid-row-gap: 10px;justify-items: center;align-items: center;padding: 5px 0;}
+.jump.jump-text>a{display: block;text-align: center;font-size: 13px;}
+
+/******************************
+ * 自适应
+ ******************************/
+@media screen and (max-width: 992px){
+    body:before{
+        display: none;
+    }
+    main{
+        width: 98%;
+        margin-top: 5px;
+    }
+    main .item.downlist .type0{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 20px;
+    }
+    main .item.downlist .type0{
+        margin-top: 20px;
+    }
+    main .item.downlist .type0>a{
+        margin: 0;
+    }
+    .jump.jump-pic>a:after{border-radius: 6px 0;}
+	.jump.jump-pic>a>img{height: 50px;border-radius: 6px;}
+	.jump.jump-pic.jump-block{grid-template-columns: repeat(3, 1fr);}
+	.jump.jump-pic.jump-block>a>img{height: 60px;}
+}
+@media screen and (max-width: 768px){
+    main .item.downlist .type0{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 568px){
+    main{
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 1fr;
+    }
+    main .item.cover{
+        display: none;
+    }
+    main .item.downlist .type0{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .jump.jump-pic.jump-block>a>img{height: 50px;}
+}

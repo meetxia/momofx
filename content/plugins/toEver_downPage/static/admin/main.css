@@ -1,0 +1,13 @@
+.toEverDownPage_form_addConfig>span{margin-right: 10px;}
+.toEverDownPage_form_addConfig>span>b{color: #e74a3b;}
+#toEverDownPage_form_downloadList .form-group{position: relative;}
+#toEverDownPage_form_downloadList .form-group .info{padding: 0 10px;position: absolute;width: 100%;top: -10px;}
+#toEverDownPage_form_downloadList .form-group .info>span{padding-left: 10px;background-color: #fff;color: #4e73df;}
+#toEverDownPage_form_downloadList .form-group .info>a{padding: 0 10px;background-color: #fff;}
+#toEverDownPage_form_downloadList .form-group .main{padding: 15px 10px 0;}
+#toEverDownPage_form_downloadList .border{border-color: #4e73df!important;}
+.teDown_title h1{display: flex;align-items: center;}
+.teDown_title h1 .layui-badge{margin-left: 20px;}
+.layui-form-onswitch{border-color: #5298ff!important;background-color: #5298ff!important;}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{background-color: #5298ff!important;}
+.layui-collapse{margin-bottom: 10px;}

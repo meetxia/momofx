@@ -1,0 +1,214 @@
+/* 骨架 */
+.placeholder {
+    opacity: 1;
+    background:linear-gradient(118deg,rgba(121,121,121,.1) 25%,rgba(121,121,121,.2) 37%,rgba(121,121,121,.1) 63%);
+    -webkit-animation:placeholder 1.5s ease infinite!important;
+    animation:placeholder 1.5s ease infinite!important;
+    background-size:400% 100%!important
+}
+@-webkit-keyframes placeholder {
+    0% {
+        background-position:100% 50%
+    }
+    100% {
+        background-position:0 50%
+    }
+}
+@keyframes placeholder {
+    0% {
+        background-position:100% 50%
+    }
+    100% {
+        background-position:0 50%
+    }
+}
+#teDown_box *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#teDown_box .teDown_box_marginTop20{
+    margin-top: 20px;
+}
+#teDown_box .teDown_box_title{
+    width: fit-content;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    border-left: 4px solid #5298ff;
+    padding: 0 0 0 10px;
+    line-height: 18px;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type0{
+    display: flex;
+    flex-wrap: wrap;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type0>a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5298ff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+    margin: 20px 15px 0 0;
+    border: 0;
+    white-space: nowrap;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type0>a:hover{
+    color: #fff!important;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type0>a{
+    display: flex;
+    align-items: center;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type0>a>img{
+    margin-right: 5px;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type0>a>div{
+    display: flex;
+    flex-direction: column;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type0>a>div>*{
+    line-height: 1;
+    white-space: normal;
+    word-break: break-all;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type0>a>div>span{
+    font-size: 15px;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type0>a>div>item{
+    font-size: 12px;
+    margin-top: 5px;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type0>a>svg.icon{
+    margin-right: 10px;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type3{
+    padding-top: 35px;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px dashed #5298ff;
+    border-radius: #5298ff;
+    position: relative;
+}
+
+@media screen and (max-width: 992px){
+    #teDown_box .teDown_box_main .teDown_box_main_type0{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 20px;
+    }
+    #teDown_box .teDown_box_main .teDown_box_main_type0{
+        margin-top: 30px;
+    }
+    #teDown_box .teDown_box_main .teDown_box_main_type0>a{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    #teDown_box .teDown_box_main .teDown_box_main_type0{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 568px){
+    #teDown_box .teDown_box_main .teDown_box_main_type0{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/******************************
+ * 回复下载
+ ******************************/
+#teDown_box .teDown_box_main .teDown_box_main_type1,
+#teDown_box .teDown_box_main .teDown_box_main_type2,
+#teDown_box .teDown_box_main .teDown_box_main_type3{
+    width: 100%;
+    border: 2px dashed #5298ff;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+#teDown_box .teDown_box_main .teDown_box_main_type1 span,
+#teDown_box .teDown_box_main .teDown_box_main_type2 span,
+#teDown_box .teDown_box_main .teDown_box_main_type3 span{
+    cursor: pointer;
+    color: #5298ff;
+    margin: 0 5px;
+}
+
+#teDown_box .teDown_box_main .teDown_box_main_type3 .pay-button{
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#teDown_box .teDown_box_main .teDown_box_main_type3 .pay-button a{
+    display: inline-block;
+    border-radius: 4px;
+    transition: .15s;
+    vertical-align: middle;
+    padding: .3em .6em;
+    text-align: center;
+    font-weight: 400;
+    background: linear-gradient(135deg, #59c3fb 10%, #268df7 100%);
+    color: #fff;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+#teDown_box .teDown_box_main .teDown_box_main_type3 .pay-button a + a{
+    margin-left: 10px;
+    background: linear-gradient(135deg, #f59f54 10%, #ff6922 100%);
+}
+
+#pay-box{
+    height: auto!important;
+}
+
+.pay-box{
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.pay-box .pay-qrcode{
+    width: 120px;
+    height: 120px;
+    border: 1px solid #eee;
+}
+.pay-box .pay-qrcode .img{
+    width: 100%;
+    height: 100%;
+    transition: all .2s;
+}
+.pay-box .pay-qrcode .img img{
+    width: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.pay-box .pay-info{
+    flex: 1;
+    margin-left: 10px;
+}
+.pay-box .pay-info p + p{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #bbb;
+}
+.pay-box .pay-info p + p a{
+    color: #bbb;
+    text-decoration: underline;
+}
+.pay-box .pay-info .money{
+    font-weight: 700;
+    font-size: 30px;
+    color: #ff5473;
+}
+.pay-box .pay-info .money .mark{
+    font-size: 13px;
+}

@@ -1,0 +1,11 @@
+{
+    "require": {
+        "catfan/medoo": "^1.7",
+        "yurunsoft/pay-sdk": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TeDownPage\\": "content/plugins/toEver_downPage/"
+        }
+    }
+}
